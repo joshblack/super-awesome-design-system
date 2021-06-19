@@ -37,6 +37,18 @@ You will need to have the following installed on your machine:
 | Rust       | `cargo clippy`             | Run `clippy` on files in the Rust workspace            |
 | Rust       | `cargo install --path cli` | Install the `dsm` cli as an executable on your machine |
 
+## Project Overview
+
+This repo is broken up into several parts, including:
+
+- The [`dsm` cli](./cli) used for managing common design system tasks in a
+  monorepo
+- A collection of [component packages](./components) that make up the design
+  system
+- A collection of [generic packages](./packages) for building the design system
+- A [website](./website) for displaying information about the project, from
+  documentation to blog posts
+
 ## 📝 License
 
 Licensed under the [MIT License](/LICENSE).
