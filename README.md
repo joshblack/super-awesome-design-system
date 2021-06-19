@@ -1,5 +1,7 @@
 # Super Awesome Design System
 
+[![ci](https://github.com/joshblack/super-awesome-design-system/actions/workflows/ci.yml/badge.svg)](https://github.com/joshblack/super-awesome-design-system/actions/workflows/ci.yml)
+
 > Sandbox for building out super awesome design systems
 
 This project is a personal development environment for trying out different
