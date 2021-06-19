@@ -1,6 +1,8 @@
 # Super Awesome Design System
 
-[![ci](https://github.com/joshblack/super-awesome-design-system/actions/workflows/ci.yml/badge.svg)](https://github.com/joshblack/super-awesome-design-system/actions/workflows/ci.yml)
+[![js](https://github.com/joshblack/super-awesome-design-system/actions/workflows/js.yml/badge.svg)](https://github.com/joshblack/super-awesome-design-system/actions/workflows/js.yml)
+[![rust](https://github.com/joshblack/super-awesome-design-system/actions/workflows/rust.yml/badge.svg)](https://github.com/joshblack/super-awesome-design-system/actions/workflows/rust.yml)
+[![security](https://github.com/joshblack/super-awesome-design-system/actions/workflows/audit-on-push.yml/badge.svg)](https://github.com/joshblack/super-awesome-design-system/actions/workflows/audit-on-push.yml)
 
 > Sandbox for building out super awesome design systems
 
