@@ -37,7 +37,14 @@ jobs:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: yarn install --immutable --immutable-cache
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            js:
+              - '**/*.js'
       - name: Check formatting of project files
         run: yarn format:diff
+        if: ${{ steps.filter.outputs.js == 'true' }}
