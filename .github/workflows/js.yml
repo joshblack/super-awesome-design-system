@@ -1,4 +1,4 @@
-name: ci
+name: js
 
 on:
   pull_request:
