@@ -5,14 +5,23 @@
   "workspaces": [
     "config/*",
     "components/*",
-    "packages/*"
+    "packages/*",
+    "website"
   ],
   "scripts": {
     "format": "prettier --write '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
-    "format:diff": "prettier --list-different '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'"
+    "format:diff": "prettier --list-different '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
+    "postinstall": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "prettier": "^2.3.1",
     "prettier-config-sads": "workspace:packages/prettier-config-sads"
+  },
+  "lint-staged": {
+    "**/*.{js,md,scss,yml,ts}": "prettier --write"
   }
 }
