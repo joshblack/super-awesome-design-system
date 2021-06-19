@@ -28,9 +28,16 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            rs:
+              - '**/*.rs'
       - uses: actions-rs/cargo@v1
         with:
           command: test
+        if: ${{ steps.filter.outputs.rs == 'true' }}
 
   fmt:
     runs-on: ubuntu-latest
@@ -48,10 +55,17 @@ jobs:
           toolchain: stable
           override: true
           components: rustfmt
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            rs:
+              - '**/*.rs'
       - uses: actions-rs/cargo@v1
         with:
           command: fmt
           args: --all -- --check
+        if: ${{ steps.filter.outputs.rs == 'true' }}
 
   clippy:
     runs-on: ubuntu-latest
@@ -69,7 +83,14 @@ jobs:
           toolchain: stable
           override: true
           components: clippy
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            rs:
+              - '**/*.rs'
       - uses: actions-rs/clippy-check@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: -- -D warnings
+        if: ${{ steps.filter.outputs.rs == 'true' }}
