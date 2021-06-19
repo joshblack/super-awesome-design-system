@@ -29,13 +29,15 @@ You will need to have the following installed on your machine:
 
 **Commands**
 
-| Language   | Command                    | Description                                            |
-| ---------- | -------------------------- | ------------------------------------------------------ |
-| JavaScript | `yarn format`              | Format files in the project using `prettier`           |
-| Rust       | `cargo fmt`                | Format rust files using cargo fmt                      |
-| Rust       | `cargo test`               | Run the tests for the Rust files in the workspace      |
-| Rust       | `cargo clippy`             | Run `clippy` on files in the Rust workspace            |
-| Rust       | `cargo install --path cli` | Install the `dsm` cli as an executable on your machine |
+| Language   | Command                    | Description                                                                  |
+| ---------- | -------------------------- | ---------------------------------------------------------------------------- |
+| JavaScript | `yarn`                     | Install JavaScript dependencies for the monorepo                             |
+| JavaScript | `yarn format`              | Format files in the project using `prettier`                                 |
+| JavaScript | `yarn dedupe`              | Determine if we can deduplicate packages based on overlapping package ranges |
+| Rust       | `cargo fmt`                | Format rust files using cargo fmt                                            |
+| Rust       | `cargo test`               | Run the tests for the Rust files in the workspace                            |
+| Rust       | `cargo clippy`             | Run `clippy` on files in the Rust workspace                                  |
+| Rust       | `cargo install --path cli` | Install the `dsm` cli as an executable on your machine                       |
 
 ## Project Overview
 
