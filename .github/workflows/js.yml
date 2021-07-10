@@ -28,16 +28,13 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: '14.x'
-      - name: Get yarn cache directory path
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - uses: actions/cache@v1
-        id: cache
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: |
+            node_modules
+            */**/node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
-        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: yarn install --immutable --immutable-cache
       - uses: dorny/paths-filter@v2.2.1
         id: filter
@@ -48,3 +45,29 @@ jobs:
       - name: Check formatting of project files
         run: yarn format:diff
         if: ${{ steps.filter.outputs.js == 'true' }}
+
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '14.x'
+      - uses: actions/cache@v1
+        with:
+          path: |
+            node_modules
+            */**/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            ts:
+              - '**/*.ts?x'
+      - name: Typecheck TypeScript files
+        run: yarn typecheck
+        if: ${{ steps.filter.outputs.ts == 'true' }}
