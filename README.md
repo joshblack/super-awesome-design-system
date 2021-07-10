@@ -51,6 +51,22 @@ This repo is broken up into several parts, including:
 - A [website](./website) for displaying information about the project, from
   documentation to blog posts
 
+## Links & Inspiration
+
+This list of projects and resources are ones that I've found inspirational or
+referenced heavily during the course of exploring concepts in this repo. I want
+to give each of them a huge shoutout for how helpful they've been:
+
+**Radix UI**
+
+[Homepage](https://www.radix-ui.com/) |
+[Primitives](https://github.com/radix-ui/primitives) |
+[Website](https://github.com/radix-ui/website)
+
+Radix is always an inspiration, whether that's for accessible component
+implementations in React, how they've organized their projects, or the awesome
+website that they've made.
+
 ## 📝 License
 
 Licensed under the [MIT License](/LICENSE).
