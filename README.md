@@ -67,6 +67,13 @@ Radix is always an inspiration, whether that's for accessible component
 implementations in React, how they've organized their projects, or the awesome
 website that they've made.
 
+**TypeScript**
+
+This project is one of my first using TypeScript. This is a growing list of
+TypeScript resources that I found helpful along the way.
+
+- https://github.com/typescript-cheatsheets/react
+
 ## 📝 License
 
 Licensed under the [MIT License](/LICENSE).
