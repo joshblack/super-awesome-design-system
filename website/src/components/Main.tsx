@@ -15,7 +15,7 @@ interface Props {
 
 export function Main({ children, ...rest }: Props) {
   return (
-    <main {...rest} id={SHARED_SKIP_ID} tabIndex="-1">
+    <main {...rest} id={SHARED_SKIP_ID} tabIndex={-1}>
       {children}
     </main>
   );
