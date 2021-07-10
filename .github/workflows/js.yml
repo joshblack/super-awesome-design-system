@@ -67,7 +67,8 @@ jobs:
         with:
           filters: |
             ts:
-              - '**/*.ts?x'
+              - '**/*.ts'
+              - '**/*.tsx'
       - name: Typecheck TypeScript files
         run: yarn typecheck
         if: ${{ steps.filter.outputs.ts == 'true' }}
