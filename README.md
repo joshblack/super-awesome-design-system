@@ -67,6 +67,14 @@ Radix is always an inspiration, whether that's for accessible component
 implementations in React, how they've organized their projects, or the awesome
 website that they've made.
 
+**Mantine**
+
+[Homepage](https://mantine.dev/)
+
+The spread of the mantine library is incredible, covering a wide variety of
+hooks and components. I love referencing what this project is doing and seeing
+what gaps there are in the React component space in my own design systems.
+
 **TypeScript**
 
 This project is one of my first using TypeScript. This is a growing list of
