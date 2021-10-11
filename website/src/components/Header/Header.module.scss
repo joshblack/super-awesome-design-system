@@ -1,0 +1,27 @@
+//
+// Copyright (c) Super Awesome Design System
+//
+// This source code is licensed under the MIT license found in the
+// LICENSE file in the root directory of this source tree.
+//
+
+.header {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  column-gap: 2rem;
+  padding: 0 1rem;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid black;
+}
+
+.header > * {
+  height: 100%;
+}
+
+.links {
+  display: inline-flex;
+  column-gap: 1rem;
+  align-items: center;
+  height: 100%;
+}

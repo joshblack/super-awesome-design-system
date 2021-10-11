@@ -8,10 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "babel-plugin-dev-expression": "^0.2.2",
     "next": "^11.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sads": "^0.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "babel-plugin-dev-expression": "^0.2.2",
+    "sass": "^1.42.1"
   }
 }

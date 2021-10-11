@@ -5,23 +5,27 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import classes from './Header.module.scss';
 import Link from 'next/link';
 
 export function Header() {
   return (
-    <header aria-label="Site header">
+    <header aria-label="Site header" className={classes.header}>
       <Link href="/">
-        <a>
+        <a className="center">
           <span>SADS</span>
         </a>
       </Link>
       <nav aria-label="Site navigation">
-        <ul>
+        <ul className={classes.links}>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/docs">Docs</Link>
           </li>
           <li>
             <Link href="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link href="/stories">Stories</Link>
           </li>
         </ul>
       </nav>

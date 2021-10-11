@@ -1,0 +1,18 @@
+//
+// Copyright (c) Super Awesome Design System
+//
+// This source code is licensed under the MIT license found in the
+// LICENSE file in the root directory of this source tree.
+//
+
+/// Method to visually hide something but still keep it available to screen readers
+/// @see https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
