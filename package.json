@@ -9,8 +9,8 @@
     "website"
   ],
   "scripts": {
-    "format": "prettier --write '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
-    "format:diff": "prettier --list-different '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
+    "format": "prettier --write '**/*.{js,md,scss,yml,ts,tsx}' '!**/{build,es,lib,storybook-static}/**'",
+    "format:diff": "prettier --list-different '**/*.{js,md,scss,yml,ts,tsx}' '!**/{build,es,lib,storybook-static}/**'",
     "postinstall": "husky install",
     "test": "jest",
     "typecheck": "tsc --skipLibCheck --noEmit"
