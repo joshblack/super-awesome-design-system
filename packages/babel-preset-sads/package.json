@@ -1,0 +1,16 @@
+{
+  "name": "babel-preset-sads",
+  "private": true,
+  "exports": {
+    ".": "./index.js",
+    "./test.js": "./test.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-react-constant-elements": "^7.14.5",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-plugin-dev-expression": "^0.2.2"
+  }
+}
