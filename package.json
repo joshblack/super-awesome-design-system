@@ -12,13 +12,17 @@
     "format": "prettier --write '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
     "format:diff": "prettier --list-different '**/*.{js,md,scss,yml,ts}' '!**/{build,es,lib,storybook-static}/**'",
     "postinstall": "husky install",
+    "test": "jest",
     "typecheck": "tsc --skipLibCheck --noEmit"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^27.0.2",
     "@types/react": "^17.0.14",
     "husky": ">=6",
+    "jest": "^27.2.5",
+    "jest-preset-sads": "workspace:packages/jest-preset-sads",
     "lint-staged": ">=10",
     "prettier": "^2.3.1",
     "prettier-config-sads": "workspace:packages/prettier-config-sads",
