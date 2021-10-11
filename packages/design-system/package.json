@@ -1,5 +1,14 @@
 {
   "name": "sads",
   "version": "0.0.0",
-  "private": true
+  "license": "MIT",
+  "author": "Josh Black",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshblack/super-awesome-design-system.git",
+    "directory": "packages/design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/joshblack/super-awesome-design-system/issues"
+  }
 }
