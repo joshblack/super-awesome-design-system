@@ -8,6 +8,8 @@
 'use strict';
 
 module.exports = {
+  setupFiles: [require.resolve('./setup/setup.js')],
+  setupFilesAfterEnv: [require.resolve('./setup/setupAfterEnv.js')],
   testEnvironment: 'jsdom',
   testMatch: [
     '<rootDir>/**/__tests__/**/*.[jt]s?(x)',
