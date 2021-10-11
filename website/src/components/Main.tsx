@@ -22,5 +22,9 @@ export function Main({ children, ...rest }: Props) {
 }
 
 export function SkipToContent() {
-  return <a href={`#${SHARED_SKIP_ID}`}>Skip to content</a>;
+  return (
+    <a className="visually-hidden" href={`#${SHARED_SKIP_ID}`}>
+      Skip to content
+    </a>
+  );
 }
