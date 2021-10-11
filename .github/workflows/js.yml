@@ -43,17 +43,8 @@ jobs:
           node-version: '14.x'
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
-      - uses: dorny/paths-filter@v2.2.1
-        id: filter
-        with:
-          filters: |
-            javascript:
-              - '**/*.ts'
-              - '**/*.tsx'
-              - '**/*.js'
       - name: Run tests
         run: yarn test
-        if: ${{ steps.filter.outputs.javascript == 'true' }}
 
   typecheck:
     runs-on: ubuntu-latest
@@ -65,14 +56,5 @@ jobs:
           node-version: '14.x'
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
-      - uses: dorny/paths-filter@v2.2.1
-        id: filter
-        with:
-          filters: |
-            ts:
-              - '**/*.ts'
-              - '**/*.tsx'
-              - '**/*.js'
       - name: Typecheck files
         run: yarn typecheck
-        if: ${{ steps.filter.outputs.ts == 'true' }}
