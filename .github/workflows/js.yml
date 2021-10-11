@@ -28,23 +28,32 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: '14.x'
-      - uses: actions/cache@v2.1.6
-        with:
-          path: |
-            node_modules
-            */**/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
-      - uses: dorny/paths-filter@v2.10.2
+      - name: Check formatting of project files
+        run: yarn format:diff
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+      - uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
           filters: |
-            js:
+            javascript:
+              - '**/*.ts'
+              - '**/*.tsx'
               - '**/*.js'
-      - name: Check formatting of project files
-        run: yarn format:diff
-        if: ${{ steps.filter.outputs.js == 'true' }}
+      - name: Run tests
+        run: yarn test
+        if: ${{ steps.filter.outputs.javascript == 'true' }}
 
   typecheck:
     runs-on: ubuntu-latest
@@ -54,12 +63,6 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: '14.x'
-      - uses: actions/cache@v2.1.6
-        with:
-          path: |
-            node_modules
-            */**/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
       - uses: dorny/paths-filter@v2.2.1
@@ -69,6 +72,7 @@ jobs:
             ts:
               - '**/*.ts'
               - '**/*.tsx'
-      - name: Typecheck TypeScript files
+              - '**/*.js'
+      - name: Typecheck files
         run: yarn typecheck
         if: ${{ steps.filter.outputs.ts == 'true' }}
