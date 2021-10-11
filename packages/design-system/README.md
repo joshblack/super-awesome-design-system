@@ -1,1 +1,1 @@
-# design-system
+# Super Awesome Design System
