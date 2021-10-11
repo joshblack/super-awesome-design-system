@@ -1,2 +1,3 @@
 .yarnrc.yml
 .yarn/**/*.yml
+.next
