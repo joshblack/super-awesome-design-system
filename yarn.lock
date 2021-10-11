@@ -2184,7 +2184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-escapes@npm:^4.2.1, ansi-escapes@npm:^4.3.0":
+"ansi-escapes@npm:^4.2.1, ansi-escapes@npm:^4.3.0, ansi-escapes@npm:^4.3.1":
   version: 4.3.2
   resolution: "ansi-escapes@npm:4.3.2"
   dependencies:
@@ -2218,6 +2218,13 @@ __metadata:
   version: 5.0.1
   resolution: "ansi-regex@npm:5.0.1"
   checksum: 2aa4bb54caf2d622f1afdad09441695af2a83aa3fe8b8afa581d205e57ed4261c183c4d3877cee25794443fde5876417d859c108078ab788d6af7e4fe52eb66b
+  languageName: node
+  linkType: hard
+
+"ansi-regex@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "ansi-regex@npm:6.0.1"
+  checksum: 1ff8b7667cded1de4fa2c9ae283e979fc87036864317da86a2e546725f96406746411d0d85e87a2d12fa5abd715d90006de7fa4fa0477c92321ad3b4c7d4e169
   languageName: node
   linkType: hard
 
@@ -2503,7 +2510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-sads@workspace:packages/babel-preset-sads":
+"babel-preset-sads@^0.0.0, babel-preset-sads@workspace:packages/babel-preset-sads":
   version: 0.0.0-use.local
   resolution: "babel-preset-sads@workspace:packages/babel-preset-sads"
   dependencies:
@@ -2513,6 +2520,7 @@ __metadata:
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
     babel-plugin-dev-expression: ^0.2.2
+    babel-preset-sads: ^0.0.0
   languageName: unknown
   linkType: soft
 
@@ -2868,6 +2876,13 @@ __metadata:
   version: 1.0.2
   resolution: "char-regex@npm:1.0.2"
   checksum: b563e4b6039b15213114626621e7a3d12f31008bdce20f9c741d69987f62aeaace7ec30f6018890ad77b2e9b4d95324c9f5acfca58a9441e3b1dcdd1e2525d17
+  languageName: node
+  linkType: hard
+
+"char-regex@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "char-regex@npm:2.0.0"
+  checksum: 6084a8f0f652cdeba71cb7bbab40a2878bd41286044dffbe439fba81813a4fbf7c74ecaeb093caa8163f60e9865d4578ff42e6389ade3d7571d17af7691fcabe
   languageName: node
   linkType: hard
 
@@ -4976,7 +4991,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-regex-util@npm:^27.0.6":
+"jest-preset-sads@workspace:packages/jest-preset-sads":
+  version: 0.0.0-use.local
+  resolution: "jest-preset-sads@workspace:packages/jest-preset-sads"
+  dependencies:
+    "@babel/core": ^7.15.8
+    babel-jest: ^27.2.5
+    jest: ^27.2.5
+    jest-watch-typeahead: ^1.0.0
+  languageName: unknown
+  linkType: soft
+
+"jest-regex-util@npm:^27.0.0, jest-regex-util@npm:^27.0.6":
   version: 27.0.6
   resolution: "jest-regex-util@npm:27.0.6"
   checksum: 4d613b00f2076560e9d5e5674ec63a4130d7b1584dbbf25d84d3a455b0ff7a12d8f94eaa00facd7934d285330d370c270ca093667d537a5842e95457e8e1ecf4
@@ -5147,7 +5173,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-watcher@npm:^27.2.5":
+"jest-watch-typeahead@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "jest-watch-typeahead@npm:1.0.0"
+  dependencies:
+    ansi-escapes: ^4.3.1
+    chalk: ^4.0.0
+    jest-regex-util: ^27.0.0
+    jest-watcher: ^27.0.0
+    slash: ^4.0.0
+    string-length: ^5.0.1
+    strip-ansi: ^7.0.1
+  peerDependencies:
+    jest: ^27.0.0
+  checksum: 388d5189744e3fad21a8dd9e7fb5bbb9e8c12b4d07b76f8fa9c8df47fa93f25427602b20d9061431abb54290f9a24690adbf5204fd2d8cef7a7688c2f81db18d
+  languageName: node
+  linkType: hard
+
+"jest-watcher@npm:^27.0.0, jest-watcher@npm:^27.2.5":
   version: 27.2.5
   resolution: "jest-watcher@npm:27.2.5"
   dependencies:
@@ -7014,6 +7057,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slash@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "slash@npm:4.0.0"
+  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
+  languageName: node
+  linkType: hard
+
 "slice-ansi@npm:^3.0.0":
   version: 3.0.0
   resolution: "slice-ansi@npm:3.0.0"
@@ -7266,6 +7316,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"string-length@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "string-length@npm:5.0.1"
+  dependencies:
+    char-regex: ^2.0.0
+    strip-ansi: ^7.0.1
+  checksum: 71f73b8c8a743e01dcd001bcf1b197db78d5e5e53b12bd898cddaf0961be09f947dfd8c429783db3694b55b05cb5a51de6406c5085ff1aaa10c4771440c8396d
+  languageName: node
+  linkType: hard
+
 "string-width@npm:^1.0.1":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
@@ -7374,6 +7434,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-ansi@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "strip-ansi@npm:7.0.1"
+  dependencies:
+    ansi-regex: ^6.0.1
+  checksum: 257f78fa433520e7f9897722731d78599cb3fce29ff26a20a5e12ba4957463b50a01136f37c43707f4951817a75e90820174853d6ccc240997adc5df8f966039
+  languageName: node
+  linkType: hard
+
 "strip-bom@npm:^4.0.0":
   version: 4.0.0
   resolution: "strip-bom@npm:4.0.0"
@@ -7441,6 +7510,7 @@ __metadata:
     "@types/react": ^17.0.14
     husky: ">=6"
     jest: ^27.2.5
+    jest-preset-sads: "workspace:packages/jest-preset-sads"
     lint-staged: ">=10"
     prettier: ^2.3.1
     prettier-config-sads: "workspace:packages/prettier-config-sads"
