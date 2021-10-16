@@ -1,0 +1,29 @@
+//
+// Copyright (c) Super Awesome Design System
+//
+// This source code is licensed under the MIT license found in the
+// LICENSE file in the root directory of this source tree.
+//
+
+$spacing: (
+  spacing-0: 0,
+  spacing-1: 1px,
+  spacing-2: 2px,
+  spacing-3: 4px,
+  spacing-4: 0.5rem,
+  spacing-5: 0.75rem,
+  spacing-6: 1rem,
+  spacing-7: 1.25rem,
+  spacing-8: 1.5rem,
+  spacing-9: 2rem,
+  spacing-10: 2.5rem,
+  spacing-11: 3rem,
+  spacing-12: 4rem,
+  spacing-13: 5rem,
+) !default;
+
+$gap: (
+  gap-none: var(--spacing-0),
+  gap: var(--spacing-6),
+  gap-cozy: var(--spacing-9),
+) !default;

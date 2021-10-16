@@ -1,3 +1,5 @@
 .yarnrc.yml
 .yarn/**/*.yml
 .next
+esm
+cjs

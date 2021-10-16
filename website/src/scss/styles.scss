@@ -5,6 +5,8 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-@use 'vendor/normalize';
 @use 'reset';
+@use 'sads/scss/components' as s;
+@use 'root';
 @use 'utilities';
+@use 'components';

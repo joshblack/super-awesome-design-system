@@ -5,35 +5,10 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
+@use 'sads/scss/reset';
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#__next {
+  height: 100%;
+  position: relative;
+  z-index: 0;
 }

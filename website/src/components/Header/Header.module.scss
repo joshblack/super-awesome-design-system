@@ -11,8 +11,14 @@
   column-gap: 2rem;
   padding: 0 1rem;
   align-items: center;
-  height: 48px;
+  height: var(--header-height);
   border-bottom: 1px solid black;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
 }
 
 .header > * {

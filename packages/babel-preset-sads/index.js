@@ -25,6 +25,7 @@ module.exports = () => {
     plugins: [
       'dev-expression',
       '@babel/plugin-transform-react-constant-elements',
+      '@babel/plugin-transform-runtime',
     ],
   };
 };

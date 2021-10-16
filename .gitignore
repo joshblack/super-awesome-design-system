@@ -1,6 +1,8 @@
 # Build folders
 es
+esm
 lib
+cjs
 
 # Config files
 .npmrc
