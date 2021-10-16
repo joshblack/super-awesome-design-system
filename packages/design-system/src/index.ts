@@ -5,4 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+export const a = 1;
+
 export { SVG } from './components/SVG';
+export { useOutsideClick } from './hooks/useOutsideClick';
