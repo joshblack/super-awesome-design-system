@@ -28,7 +28,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - uses: dorny/paths-filter@v2.10.2
+      - uses: dorny/paths-filter@v2.11.0
         id: filter
         with:
           filters: |
@@ -55,7 +55,7 @@ jobs:
           toolchain: stable
           override: true
           components: rustfmt
-      - uses: dorny/paths-filter@v2.10.2
+      - uses: dorny/paths-filter@v2.11.0
         id: filter
         with:
           filters: |
@@ -83,7 +83,7 @@ jobs:
           toolchain: stable
           override: true
           components: clippy
-      - uses: dorny/paths-filter@v2.10.2
+      - uses: dorny/paths-filter@v2.11.0
         id: filter
         with:
           filters: |
