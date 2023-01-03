@@ -7291,9 +7291,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.58.0":
-  version: 2.58.0
-  resolution: "rollup@npm:2.58.0"
+"rollup@npm:^3.9.1":
+  version: 3.9.1
+  resolution: "rollup@npm:3.9.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -7301,7 +7301,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: a5e5642f2b1e239e3698eeee93b19d905e55e3012c63978cebc71e76c0a4eb2de5cff06a2a80d68bf87fe6869c57647cccc335daba280a5449a9214abdeca247
+  checksum: 929cfab6b8bb2e20c28d7a4c3909b53729f4a63d8cc14f3b1a217d5f8e550737ee0903124ba58a1f2e7efd45c596e044a968aa379411731d0e76c910621d7d3f
   languageName: node
   linkType: hard
 
@@ -7331,7 +7331,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     rimraf: ^3.0.2
-    rollup: ^2.58.0
+    rollup: ^3.9.1
     rollup-plugin-strip-banner: ^2.0.0
     typescript: ^4.4.4
   peerDependencies:
